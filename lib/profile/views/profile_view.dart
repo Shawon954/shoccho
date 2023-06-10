@@ -14,7 +14,8 @@ class _PROFILEVIEWState extends State<PROFILEVIEW> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.whitelite_color,
+        backgroundColor: AppColors.lite_color,
+
 
         body: Center(
           child: Text('PROFILE'),

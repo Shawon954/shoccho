@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoccho/AppColors/appcolors.dart';
+import 'package:shoccho/AppStyle/appstyle.dart';
 import 'package:shoccho/Screen/home/views/home_view.dart';
 import 'package:shoccho/attendance/views/attendance_view.dart';
 import 'package:shoccho/profile/views/profile_view.dart';
@@ -45,13 +47,14 @@ class _NAVIGATIONBARState extends State<NAVIGATIONBAR> {
                 bottomRight: Radius.circular(60)).r,
             child: BottomNavigationBar(
               currentIndex: _currentIndex,
-              backgroundColor: Colors.white,
+              backgroundColor: AppColors.lite_color.withOpacity(0.6),
               onTap: _onItemTapped,
-              selectedFontSize: 14,
+              unselectedFontSize: 15,
               showSelectedLabels: false,
               showUnselectedLabels: true,
               iconSize: 20,
-
+              unselectedLabelStyle: TextStyle( fontWeight: FontWeight.w500,
+                  fontFamily: 'Gilroy',),
               items: [
                 BottomNavigationBarItem(
                     icon: CircleAvatar(
@@ -59,13 +62,17 @@ class _NAVIGATIONBARState extends State<NAVIGATIONBAR> {
                             ? Colors.blueAccent
                             : Colors.transparent,
                         radius: 25.r,
-                        child: Icon(
-                          Icons.calendar_month,
-                          color:
-                              _currentIndex == 0 ? Colors.white : Colors.grey,
-                          size: _currentIndex == 0 ? 35 : 30,
-                        )),
-                    label: 'Calender'),
+                        child:ImageIcon( AssetImage(
+                          'assets/navbaricons/atte.png',
+
+                        ),
+                          color: _currentIndex == 0 ? Colors.white : Colors.grey,
+                          size: _currentIndex == 0? 32:28,
+                        ),
+
+            ),label: 'Attendance'
+                    ),
+
 
                 BottomNavigationBarItem(
                     icon: CircleAvatar(
@@ -73,26 +80,37 @@ class _NAVIGATIONBARState extends State<NAVIGATIONBAR> {
                             ? Colors.blueAccent
                             : Colors.transparent,
                         radius: 25.r,
-                        child: Icon(
-                          Icons.home,
-                          color:
-                              _currentIndex == 1 ? Colors.white : Colors.grey,
-                          size: _currentIndex == 1 ? 35 : 30,
-                        )),
-                    label: 'Home'),
+                        child: ImageIcon(
+
+                          AssetImage(
+                          'assets/navbaricons/home.png',
+
+                        ),
+                          color: _currentIndex == 1 ? Colors.white : Colors.grey,
+                          size:  _currentIndex == 1? 32:28,
+                        ),
+
+                    ),label: 'Home',
+
+                    ),
+
                 BottomNavigationBarItem(
                     icon: CircleAvatar(
                         backgroundColor: _currentIndex == 2
                             ? Colors.blueAccent
                             : Colors.transparent,
                         radius: 25.r,
-                        child: Icon(
-                          Icons.person,
-                          color:
-                              _currentIndex == 2 ? Colors.white : Colors.grey,
-                          size: _currentIndex == 2 ? 35 : 30,
-                        )),
-                    label: 'profile'),
+                        child: ImageIcon( AssetImage(
+                          'assets/navbaricons/profile.png',
+
+                        ),
+                          color: _currentIndex == 2 ? Colors.white : Colors.grey,
+                          size:  _currentIndex == 2? 32:28,
+                        ),
+
+                    ),label: 'Profile'
+                    ),
+
               ],
             ),
           ),

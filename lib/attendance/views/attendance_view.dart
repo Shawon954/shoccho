@@ -14,7 +14,7 @@ class _ATTENVIEWState extends State<ATTENVIEW> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.whitelite_color,
+        backgroundColor: AppColors.lite_color,
 
         body: Center(
 
