@@ -21,6 +21,7 @@ class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
   final _formKey = GlobalKey<FormState>();
 
   bool pass = true;
+  bool confirmpass = true;
 
   submithundel() {
     _formKey.currentState!.validate();
@@ -190,7 +191,7 @@ class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
                                             TextFormField(
                                               controller: _Confirpasswordcontroller,
                                               keyboardType: TextInputType.text,
-                                              obscureText: pass,
+                                              obscureText: confirmpass,
                                               validator: (value) {
                                                 if (value!.isEmpty) {
                                                   return 'Enter your Confirm password';
@@ -208,11 +209,11 @@ class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
                                                 suffixIcon: GestureDetector(
                                                   onTap: () {
                                                     setState(() {
-                                                      pass = !pass;
+                                                      confirmpass = !confirmpass;
                                                     });
                                                   },
                                                   child: Icon(
-                                                    pass
+                                                    confirmpass
                                                         ? Icons
                                                         .visibility_off_outlined
                                                         : Icons

@@ -8,18 +8,12 @@ import 'package:shoccho/Button/custom_button.dart';
 import 'package:shoccho/Screen/auth/forgot/forgotverify/controller/verifycontroller.dart';
 
 import 'package:sms_autofill/sms_autofill.dart';
-import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 
 class FOEGOTVERIFICATION extends GetView<VERIFYCONTROLLER> {
 
-
   @override
   Widget build(BuildContext context) {
-
-
-
-
     return SafeArea(
       child: Scaffold(
         extendBody: true,
@@ -178,7 +172,7 @@ class FOEGOTVERIFICATION extends GetView<VERIFYCONTROLLER> {
                                             alignment: Alignment.center,
                                             child: Text(
                                                 "Wait -${currentRemainingTime.toString().length == 4 ? " ${currentRemainingTime.toString().substring(0, 2)}" : " ${currentRemainingTime.toString().substring(0, 1)}"}",
-                                                style: const TextStyle(fontSize: 16)),
+                                                style: AppStyle().Resendbutton),
                                           );
                                         }
                                       },
