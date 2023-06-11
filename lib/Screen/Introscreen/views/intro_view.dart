@@ -15,7 +15,7 @@ class INTROVIEW extends StatefulWidget {
 }
 
 class _INTROVIEWState extends State<INTROVIEW> {
-  var size, height, width;
+
 
   PageController _pageController = PageController();
 
@@ -23,24 +23,22 @@ class _INTROVIEWState extends State<INTROVIEW> {
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+
     return Scaffold(
         body: Column(
       children: [
         Stack(
           children: [
             Container(
-              height:height,
-              width: width,
+              height: 844.h,
+              width: 390.w,
               decoration: BoxDecoration(
                 color: Colors.black45,
               ),
             ),
             Container(
-              height: height,
-              width: width,
+              height: 844.h,
+              width: 390.w,
               decoration: BoxDecoration(
                   image: DecorationImage(
                 opacity: .6,
@@ -198,10 +196,7 @@ class _INTROVIEWState extends State<INTROVIEW> {
                                                 fontWeight: FontWeight.w500),
                                           ),
                                           onTap: () {
-                                            _pageController.nextPage(
-                                                duration:
-                                                    Duration(milliseconds: 500),
-                                                curve: Curves.easeIn);
+                                            _pageController.nextPage;
 
                                              Get.offAndToNamed(AppPage.LOGIN);
 

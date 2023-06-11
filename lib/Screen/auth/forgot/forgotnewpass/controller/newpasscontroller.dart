@@ -1,13 +1,9 @@
 import 'package:get/get.dart';
 
-
-class HOMECONTOLLER extends GetxController{
-
-
-
-
+class NEWPASSCONTROLLER extends GetxController{
+  bool pass = true;
   @override
-  void onInit() {
+  void onInit() async{
 
     super.onInit();
   }

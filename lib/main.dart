@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shoccho/Route/app_route.dart';
+import 'package:shoccho/Screen/home/views/home_view.dart';
 import 'package:shoccho/Screen/splash/views/splash_view.dart';
 
 
@@ -13,6 +14,7 @@ void main() async{
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown
   ]);
+   await ScreenUtil.ensureScreenSize();
 
   runApp(const MyApp());
 }
@@ -29,10 +31,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 
       ),
-      home: SPLASHVIEW(),
+
       initialRoute: AppPage.INITIAL,
       getPages: AppPage.routes,
     );

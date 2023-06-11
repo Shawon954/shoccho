@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shoccho/AppColors/appcolors.dart';
-import 'package:shoccho/AppStyle/appstyle.dart';
+import 'package:shoccho/Screen/attendance/views/attendance_view.dart';
 import 'package:shoccho/Screen/home/views/home_view.dart';
-import 'package:shoccho/attendance/views/attendance_view.dart';
-import 'package:shoccho/profile/views/profile_view.dart';
+import 'package:shoccho/Screen/profile/views/profile_view.dart';
+
 
 class NAVIGATIONBAR extends StatefulWidget {
   const NAVIGATIONBAR({super.key});
@@ -47,7 +46,7 @@ class _NAVIGATIONBARState extends State<NAVIGATIONBAR> {
                 bottomRight: Radius.circular(60)).r,
             child: BottomNavigationBar(
               currentIndex: _currentIndex,
-              backgroundColor: AppColors.lite_color.withOpacity(0.6),
+              backgroundColor: Colors.grey.shade100,
               onTap: _onItemTapped,
               unselectedFontSize: 15,
               showSelectedLabels: false,

@@ -16,7 +16,7 @@ class FORGOTNEWPASSWORD extends StatefulWidget {
 
 class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
 
-  var size, height, width;
+
 
   final _formKey = GlobalKey<FormState>();
 
@@ -33,9 +33,7 @@ class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+
     return SafeArea(
       child: Scaffold(
         extendBody: true,
@@ -44,14 +42,14 @@ class _FORGOTNEWPASSWORDState extends State<FORGOTNEWPASSWORD> {
           child: Column(
             children: [
               Container(
-                height:height,
-                width: width,
+                height: 844.h,
+                width: 390.w,
                 decoration: BoxDecoration(
                   color: Colors.black45,
                 ),
                 child: Container(
-                  height: height,
-                  width: width,
+                  height: 844.h,
+                  width: 390.w,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           opacity: .6,

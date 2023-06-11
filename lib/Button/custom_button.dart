@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:shoccho/AppColors/appcolors.dart';
 
 class CUSTOMBUTTON extends StatelessWidget {
@@ -16,7 +17,7 @@ class CUSTOMBUTTON extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: (){onAction;}, child: Text(title));
+    return ElevatedButton(onPressed: (){Get.toNamed(onAction.toString());}, child: Text(title));
 
   }
 }

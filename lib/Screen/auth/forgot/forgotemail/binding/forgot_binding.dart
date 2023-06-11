@@ -1,9 +1,9 @@
 
 
 import 'package:get/get.dart';
-import 'package:shoccho/Screen/auth/forgot/controller/forgot_controller.dart';
+import 'package:shoccho/Screen/auth/forgot/forgotemail/controller/forgot_controller.dart';
 
-class FORGOTBINDING extends Bindings{
+class FORGOTEMAILBINDING extends Bindings{
   @override
   void dependencies() {
     Get.lazyPut<FORGOTCONTROLLER>(() => FORGOTCONTROLLER());

@@ -1,15 +1,13 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shoccho/AppColors/appcolors.dart';
+import 'package:shoccho/Screen/attendance/controller/attendance_controller.dart';
 
-class ATTENVIEW extends StatefulWidget {
+class ATTENVIEW extends GetView<ATTENCONTROLLER> {
   const ATTENVIEW({super.key});
 
-  @override
-  State<ATTENVIEW> createState() => _ATTENVIEWState();
-}
 
-class _ATTENVIEWState extends State<ATTENVIEW> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import 'package:shoccho/AppString/appstring.dart';
 import 'package:shoccho/AppStyle/appstyle.dart';
 import 'package:shoccho/Button/custom_button.dart';
 import 'package:shoccho/Route/app_route.dart';
+import 'package:shoccho/Screen/auth/forgot/forgotemail/controller/forgot_controller.dart';
 
-class FORGOREMAIL extends StatefulWidget {
-  const FORGOREMAIL({super.key});
+class FORGOREMAIL extends GetView<FORGOTCONTROLLER> {
 
-  @override
-  State<FORGOREMAIL> createState() => _FORGOREMAILState();
-}
-
-class _FORGOREMAILState extends State<FORGOREMAIL> {
-
-  var size, height, width;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -28,13 +20,11 @@ class _FORGOREMAILState extends State<FORGOREMAIL> {
   }
 
   TextEditingController _emailcontroller = TextEditingController();
-  TextEditingController _passwordcontroller = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+
     return SafeArea(
       child: Scaffold(
         extendBody: true,
@@ -43,14 +33,14 @@ class _FORGOREMAILState extends State<FORGOREMAIL> {
           child: Column(
             children: [
               Container(
-                height:height,
-                width: width,
+                height: 844.h,
+                width: 390.w,
                 decoration: BoxDecoration(
                   color: Colors.black45,
                 ),
                 child: Container(
-                  height: height,
-                  width: width,
+                  height: 844.h,
+                  width: 390.w,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           opacity: .6,

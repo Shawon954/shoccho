@@ -3,10 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:shoccho/AppColors/appcolors.dart';
 import 'package:shoccho/Route/app_route.dart';
+import 'package:shoccho/Screen/splash/controllers/splash_controller.dart';
 
 
 
-class SPLASHVIEW extends StatelessWidget {
+class SPLASHVIEW extends GetView<SPLAHCONTROLLER> {
 
 
   @override

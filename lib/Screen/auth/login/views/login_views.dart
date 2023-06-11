@@ -21,7 +21,7 @@ class LOGINVIEW extends StatefulWidget {
 }
 
 class _LOGINVIEWState extends State<LOGINVIEW> {
-  var size, height, width;
+
 
   final _formKey = GlobalKey<FormState>();
 
@@ -37,22 +37,20 @@ class _LOGINVIEWState extends State<LOGINVIEW> {
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+
 
     return SafeArea(
       child: Scaffold(
         extendBody: true,
         body: Container(
-          height: height,
-          width: width,
+          height: 844.h,
+          width: 390.w,
           decoration: BoxDecoration(
             color: Colors.black45,
           ),
           child: Container(
-            height: height,
-            width: width,
+            height: 844.h,
+            width: 390.w,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     opacity: .6,
@@ -349,42 +347,17 @@ class _LOGINVIEWState extends State<LOGINVIEW> {
                                width: 312,
                                child: ElevatedButton(
                                  onPressed: (){
-                                   Get.toNamed(AppPage.NAVBAR);
+                                   Get.offAndToNamed(AppPage.NAVBAR);
                                  },
                                  child: Text(AppStrings().Button,style:AppStyle().Submittextstyle),style: BUTTON().buttonStyle,),
                              ),
 
+
+
                               SizedBox(
                                 height: 5.h,
                               ),
-                              // Row(
-                              //   mainAxisAlignment: MainAxisAlignment.center,
-                              //   children: [
-                              //     Text(
-                              //       AppStrings().SpanTextOne,
-                              //       style: AppStyle().sinupTextstyle,
-                              //     ),
-                              //     SizedBox(
-                              //       width: 5.h,
-                              //     ),
-                              //     InkWell(
-                              //       onTap: () {
-                              //         print('Click Ok');
-                              //       },
-                              //       child: Text(
-                              //         AppStrings().SpanTextTwo,
-                              //         style: AppStyle().sinupbuttonstyle,
-                              //       ),
-                              //     ),
-                              //     SizedBox(
-                              //       width: 5.h,
-                              //     ),
-                              //     Text(
-                              //       AppStrings().SpanTextThree,
-                              //       style: AppStyle().sinupTextstyle,
-                              //     ),
-                              //   ],
-                              // )
+
                             ],
                           ),
                         ],

@@ -51,7 +51,8 @@ class AppStyle{
     // Singup Button //
 
 
-    TextStyle Subtextstylr = TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: AppColors.black_color, fontFamily: 'Gilroy',);
+    TextStyle Subtetxtstylr = TextStyle(fontSize: 18.sp,fontWeight: FontWeight.bold,color: AppColors.black_color, fontFamily: 'Gilroy',);
+    TextStyle Resendbutton = TextStyle(fontSize: 16.sp,fontWeight: FontWeight.bold,color: AppColors.perpul_color, fontFamily: 'Gilroy',);
     TextStyle Submittextstyle = TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w600,color: AppColors.white_color, fontFamily: 'Gilroy',);
     TextStyle Generationextstylr = TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w800,color: AppColors.black_color, fontFamily: 'Gilroy',);
     TextStyle shocchoxtstylr = TextStyle(fontSize: 28.sp,fontWeight: FontWeight.w600,color: AppColors.black_color, fontFamily: 'Gilroy',);
